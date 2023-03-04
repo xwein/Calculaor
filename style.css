@@ -1,0 +1,146 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+  
+  body{
+    background-color: #e5e5f7;
+opacity: 1;
+background-size: 10px 10px;
+background-image: repeating-linear-gradient(45deg, #000106 0, #000106 1px, #e5e5f7 0, #e5e5f7 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Merriweather', serif;
+  }
+
+  .wrap{
+    width: 360px;
+    height: 120px;
+    background-color: #4B4E6D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+
+.container{
+   background-color: #95A3B3;
+   opacity: 1;
+   height: 556px;
+   width: 360px;
+  border-radius: 15px;
+   overflow: hidden;
+   border: 2px solid black;
+}
+
+.buttons{
+  display: grid;
+  padding: 20px;
+  grid-template-rows:    repeat(10, 25px);
+  grid-template-columns: repeat(4, 60px);
+  grid-gap: 1rem;
+  justify-content: center;
+  border-top: 2px solid black;
+}
+
+button{
+    grid-row-start: span 2;  
+    font-size: 1.2rem;
+    background-color:#fbfcfd;
+    color: #001D4A;
+    font-weight: bold;
+    align-content: center;
+    border-radius: 10px;
+    border: 2px solid black;
+
+}
+
+#zero{
+grid-column-start: span 2;
+}
+
+#equal,
+#plus{
+    grid-row-start: span 3;
+}
+
+#display{
+   background-color: #fbfcfd;
+   display: inline-block;
+    width: 330px;
+    height: 80px;
+    display:flex;
+    align-items: center;
+    padding: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 2px solid black;
+
+}
+
+.operator{
+  color: #001D4A;;
+}
+
+#ac{
+  color: #C03221;
+}
+
+#equal{
+  color: #38A700;
+}
+
+#del{
+  color: #F0B67F;
+}
