@@ -75,7 +75,14 @@ function calculate() {
 
   function deleteDisplay() {
     let x = myDisplay.innerHTML;
-    let arr = x.split(" ");
-    arr.splice(arr.length - 1, 1);
-    myDisplay.innerHTML = arr.join(" ");
+    console.log(x)
+    let arr = x.split("");
+    console.log(arr)
+    if(arr[arr.length - 1] === " "){
+    arr.splice(arr.length - 2, 2);
+  }
+    else {
+      arr.splice(arr.length - 1, 1);
+    }
+    myDisplay.innerHTML = arr.join("");
   }
